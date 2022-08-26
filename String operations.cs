@@ -21,7 +21,7 @@ namespace ConsoleApplication_string_operations_
 
             obj.insert();
 
-            obj.splitjoin();
+            
 
             obj.substr();
 
@@ -31,11 +31,12 @@ namespace ConsoleApplication_string_operations_
 
             obj.splitcmd();
 
-            obj.RemoveStr();
+            obj.RemoveStr(str);
 
-            obj.searchStr();
+            obj.searchStr(str);
 
             obj.Bytestream();
+            obj.splitjoin();
 
             Console.Read();
         }
@@ -58,10 +59,10 @@ namespace ConsoleApplication_string_operations_
             Console.WriteLine(stri);
         }
 
-        public void splitjion()
+        public void splitjoin()
         {
             string str4 = "one if by land, two if by sea";
-            char[] seps = {'','.'};
+            char[] seps = {' ','.'};
             string[] parts = str4.Split(seps);
             Console.WriteLine("Pices from split:");
 
@@ -82,7 +83,7 @@ namespace ConsoleApplication_string_operations_
             Console.WriteLine("substr:"+substr);
         }
 
-        public void array()
+        public void arry()
         {
             string[] str2 = {"This", "is", "a", "test."};
             Console.WriteLine("Original array:");
@@ -93,11 +94,11 @@ namespace ConsoleApplication_string_operations_
             Console.WriteLine("\n");
         }
 
-        public void bytestream()
+        public void Bytestream()
         {
             string strOriginal;
-            stroriginal = "I am Amit Kumar Dubey ans a student of dotnet class";
-            byte[] byt = System.Text.Encoding.Unicode.GetBytes(stroriginal);
+            strOriginal = "I am Amit Kumar Dubey ans a student of dotnet class";
+            byte[] byt = System.Text.Encoding.Unicode.GetBytes(strOriginal);
 
             foreach(byte brr in byt)
             {
