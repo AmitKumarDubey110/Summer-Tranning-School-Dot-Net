@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication_FunctionOverloading_
+{
+    public class Program
+    {
+        static public void Main()
+        {
+            int iVal = 4;
+            long lVal = 3;
+
+            Console.WriteLine("The square of{0} is {1}\r\n",iVal, Square(iVal));
+
+            Console.WriteLine("The square of{0} is {1}", lVal, Square(lVal));
+
+            Console.Read();
+        }
+
+        static int Square(int var)
+        {
+            Console.WriteLine("int Square(int var) method called");
+            return (var * var);
+        }
+
+        static long Square(long var)
+        {
+            Console.WriteLine("long Square(long var) method called");
+            return (var * var);
+        }
+    }
+}
